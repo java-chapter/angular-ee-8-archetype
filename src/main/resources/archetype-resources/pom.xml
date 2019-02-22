@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<name>${artifactId} - Reactor</name>
+	<description>Angular app on top of a Java EE 8 backend.</description>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>${groupId}</groupId>
+	<artifactId>${artifactId}</artifactId>
+	<version>${version}</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<!-- JavaEE 8 API -->
+		<version.javaee>8.0</version.javaee>
+
+		<!-- Maven build plugins versions. -->
+		<version.compiler.plugin>3.1</version.compiler.plugin>
+		<version.ear.plugin>2.10</version.ear.plugin>
+		<version.ejb.plugin>2.3</version.ejb.plugin>
+		<version.surefire.plugin>2.16</version.surefire.plugin>
+		<version.war.plugin>2.5</version.war.plugin>
+		<version.release.plugin>2.5.3</version.release.plugin>
+		<version.assembly.plugin>3.1.1</version.assembly.plugin>
+		<version.frontend.plugin>1.6</version.frontend.plugin>
+
+		<!-- Frontend versions. -->
+		<version.nodejs>v10.3.0</version.nodejs>
+		<version.npm>6.7.0</version.npm>
+
+		<!-- Java source and target versions. -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Project modules -->
+			<dependency>
+				<groupId>${groupId}</groupId>
+				<artifactId>${rootArtifactId}-ejb</artifactId>
+				<version>${version}</version>
+				<type>ejb</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>${groupId}</groupId>
+				<artifactId>${rootArtifactId}-web</artifactId>
+				<version>${version}</version>
+				<type>war</type>
+				<scope>compile</scope>
+			</dependency>
+
+			<!-- Java EE 8 API -->
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>${version.javaee}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>${version.release.plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${version.assembly.plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>com.github.eirslett</groupId>
+					<artifactId>frontend-maven-plugin</artifactId>
+					<version>${version.frontend.plugin}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<!-- Backend profile. This is the default profile. -->
+		<profile>
+			<id>backend</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>angularee-ejb</module>
+				<module>angularee-web</module>
+				<module>angularee-ear</module>
+			</modules>
+		</profile>
+
+		<!-- Frontend profile. -->
+		<profile>
+			<id>frontend</id>
+			<modules>
+				<module>angularee-frontend</module>
+			</modules>
+		</profile>
+	</profiles>
+
+</project>

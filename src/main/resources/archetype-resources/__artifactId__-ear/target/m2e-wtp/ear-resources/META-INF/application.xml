@@ -1,0 +1,18 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" version="7">
+  <description>Angular app on top of a Java EE 8 backend.</description>
+  <display-name>${artifactId}-ear</display-name>
+  <module>
+    <web>
+      <web-uri>${artifactId}-web.war</web-uri>
+      <context-root>/${artifactId}-web</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>${artifactId}-ejb.jar</ejb>
+  </module>
+  <library-directory>lib</library-directory>
+</application>

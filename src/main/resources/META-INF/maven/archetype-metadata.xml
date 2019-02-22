@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="angularee"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-ejb/target</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-ear/.settings</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-frontend</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.project</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-ear/target</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-web</directory>
+      <includes>
+        <include>**/*.classpath</include>
+        <include>**/*.xml</include>
+        <include>**/*.project</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-ear</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.project</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-frontend/src</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.html</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-ejb/.settings</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-web/.settings</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-web/target</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-ejb</directory>
+      <includes>
+        <include>**/*.classpath</include>
+        <include>**/*.xml</include>
+        <include>**/*.project</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-web/src</directory>
+      <includes>
+        <include>**/*.java</include>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>angularee-ejb/src</directory>
+      <includes>
+        <include>**/*.java</include>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-ejb/target</directory>
+      <includes>
+        <include>**/*.MF</include>
+        <include>**/*.class</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-frontend/src</directory>
+      <includes>
+        <include>**/*.</include>
+        <include>**/*.css</include>
+        <include>**/*.gitkeep</include>
+        <include>**/*.ico</include>
+        <include>**/*.md</include>
+        <include>**/*.json</include>
+        <include>**/*.js</include>
+        <include>**/*.ts</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-ear/.settings</directory>
+      <includes>
+        <include>**/*.component</include>
+        <include>**/*.prefs</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-ejb/.settings</directory>
+      <includes>
+        <include>**/*.component</include>
+        <include>**/*.prefs</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-web/.settings</directory>
+      <includes>
+        <include>**/*.container</include>
+        <include>**/*.component</include>
+        <include>**/*.name</include>
+        <include>**/*.jsdtscope</include>
+        <include>**/*.prefs</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-web/target</directory>
+      <includes>
+        <include>**/*.MF</include>
+        <include>**/*.class</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-ejb</directory>
+      <includes>
+        <include>**/*.gitignore</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-frontend/.settings</directory>
+      <includes>
+        <include>**/*.prefs</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-ear/target</directory>
+      <includes>
+        <include>**/*.MF</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-web</directory>
+      <includes>
+        <include>**/*.gitignore</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>angularee-ear</directory>
+      <includes>
+        <include>**/*.gitignore</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>.settings</directory>
+      <includes>
+        <include>**/*.prefs</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>.project</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>.gitignore</include>
+        <include>Jenkinsfile</include>
+        <include>LICENSE</include>
+        <include>README.md</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>
